@@ -1,0 +1,42 @@
+@import "../../../components/sass_files/_variables";
+@import "../../../components/sass_files/_methods";
+@import "../../../components/sass_files/_mediaQueries.scss";
+
+aside {
+  width: 15%;
+  height: auto;
+  border-right: 1px solid $mainColor;
+
+  .shop-by-department {
+    padding-left: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+    height: 40vh;
+
+    h2 {
+      user-select: none;
+    }
+    ul {
+      list-style: none;
+      height: 75%;
+      @include displayFlex(column, nowrap, space-around);
+
+      li {
+        a {
+          text-decoration: none;
+          color: $mainColor;
+          transition: 0.2s;
+
+          &:hover {
+            text-decoration: underline;
+            color: $yellow;
+          }
+        }
+      }
+    }
+  }
+
+  .features-container {
+    @extend .shop-by-department;
+  }
+}

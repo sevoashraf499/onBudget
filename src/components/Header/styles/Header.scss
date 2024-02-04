@@ -1,0 +1,44 @@
+@import "../../../components/sass_files/_variables";
+@import "../../../components/sass_files/_methods";
+@import "../../../components/sass_files/_mediaQueries.scss";
+
+header {
+  width: 100%;
+  height: $header-height;
+  background-color: $mainColor;
+  font-family: $main-font-family;
+  user-select: none;
+
+  .container {
+    width: 95%;
+    height: $header-height;
+
+    position: absolute;
+    left: 2.3%;
+    @include displayFlex(row, nowrap, space-between, center);
+
+    .logo {
+      width: 6rem;
+      height: $header-height;
+      cursor: pointer;
+    }
+    nav {
+      width: 10rem;
+      @include displayFlex(row, nowrap, space-around);
+
+      .navIcons {
+        width: 2rem;
+        height: 2rem;
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+      .searchIcon {
+        @extend .navIcons;
+        display: none;
+      }
+    }
+  }
+}

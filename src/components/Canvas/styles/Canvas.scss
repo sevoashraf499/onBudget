@@ -1,0 +1,12 @@
+canvas {
+  cursor: grab;
+}
+
+@media only screen and (max-width: 1000px) {
+  .left-side {
+    width: 100% !important;
+  }
+  .right-side {
+    display: none;
+  }
+}
